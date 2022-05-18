@@ -26,14 +26,20 @@
       <div class="header-wrapper">
         <nav>
           <a href="#"><img src="/assets/images/logo.svg" alt="snap" /></a>
-          <button class="hamburger-btn">
-            <img src="/assets/images/icon-menu.svg" alt="" />
+          <button class="btn" id="hamburger-btn">
+            <img src="/assets/images/icon-menu.svg" alt="Open Navigation" />
           </button>
-          <!-- <div class="nav-container">
-            <ul>
+          <div class="nav-container">
+            <button class="btn close-btn" id="close-btn">
+              <img
+                src="/assets/images/icon-close-menu.svg"
+                alt="Close Navigation"
+              />
+            </button>
+            <ul class="nav-container__nav-links">
               <li class="features-dropdown">
                 <a href="#">Features</a>
-                <ul class="features-links">
+                <ul class="features-dropdown__links">
                   <li><a href="#">Todo List</a></li>
                   <li><a href="#">Calendar</a></li>
                   <li><a href="#">Reminders</a></li>
@@ -42,7 +48,7 @@
               </li>
               <li class="company-dropdown">
                 <a href="#">Company</a>
-                <ul class="company-links">
+                <ul class="company-dropdown__links">
                   <li><a href="#">History</a></li>
                   <li><a href="#">Our Team</a></li>
                   <li><a href="#">Blog</a></li>
@@ -51,7 +57,7 @@
               <li><a href="#">Careers</a></li>
               <li><a href="#">About</a></li>
             </ul>
-            <ul>
+            <ul class="nav-container__login">
               <li><a href="#">Login</a></li>
               <li>
                 <a href="#" class="primary-button primary-button--register"
@@ -59,7 +65,8 @@
                 >
               </li>
             </ul>
-          </div> -->
+          </div>
+          <div class="modal-bg"></div>
         </nav>
       </div>
     </header>
@@ -101,5 +108,6 @@
         >. Coded by <a href="#">Ron Paolo Toyhacao</a>.
       </div>
     </footer>
+    <script src="/assets/scripts/main.js"></script>
   </body>
 </html>

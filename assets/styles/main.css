@@ -13,6 +13,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: hsl(0deg, 0%, 98%);
+}
+
 html,
 body,
 div,
@@ -162,6 +166,7 @@ a {
   text-decoration: none;
   font-family: "Epilogue", sans-serif;
   color: hsl(0deg, 0%, 41%);
+  font-size: var(--fs-500);
 }
 a:hover {
   color: hsl(0deg, 0%, 8%);
@@ -174,9 +179,10 @@ p {
   line-height: 1.5;
 }
 
-.attribution {
+.attribution,
+.attribution a {
   font-family: "Epilogue", sans-serif;
-  font-size: var(--fs-500);
+  font-size: 0.8rem;
 }
 
 @media screen and (min-width: 30rem) {
@@ -210,20 +216,22 @@ p {
   color: hsl(0deg, 0%, 41%);
   border: 2px solid hsl(0deg, 0%, 41%);
   font-weight: 500;
+  padding: 1rem 3.8rem;
 }
 .primary-button--register:hover {
   color: hsl(0deg, 0%, 8%);
   border: 2px solid hsl(0deg, 0%, 8%);
 }
 
-.hamburger-btn {
+.btn {
   border: none;
   padding: 0.5rem;
-  background-color: hsl(0deg, 0%, 98%);
+  background: none;
+  display: block;
 }
 
-body {
-  background-color: hsl(0deg, 0%, 98%);
+.close-btn {
+  margin-left: auto;
 }
 
 header {
@@ -239,10 +247,63 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
-
-.features-links,
-.company-links {
+nav .nav-container {
+  position: fixed;
+  background-color: hsl(0deg, 0%, 98%);
+  height: 100vh;
+  top: 0;
+  right: 0;
+  padding: 1.5rem;
+  z-index: 2;
+  transform: translateX(100%);
+  transition: transform 0.3s;
+}
+nav .nav-container__nav-links {
+  margin: 1rem 0;
+}
+nav .nav-container__nav-links li {
+  margin-bottom: 1.5rem;
+}
+nav .nav-container__login {
+  margin: 2rem 0;
+  text-align: center;
+}
+nav .nav-container__login li {
+  margin-bottom: 1rem;
+}
+nav .modal-bg {
   display: none;
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+}
+nav .open {
+  transform: translateX(0);
+  display: block;
+}
+
+.features-dropdown__links {
+  display: none;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+.features-dropdown:hover .features-dropdown__links {
+  display: block;
+}
+
+.company-dropdown__links {
+  display: none;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+.company-dropdown:hover .company-dropdown__links {
+  display: block;
 }
 
 .features-dropdown:hover .features-links {
@@ -251,6 +312,10 @@ nav {
 
 .company-dropdown:hover .company-links {
   display: block;
+}
+
+.disable-scroll {
+  overflow: hidden;
 }
 
 .main-container picture img {

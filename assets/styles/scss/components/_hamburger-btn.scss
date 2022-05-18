@@ -1,8 +1,9 @@
-.hamburger-btn {
+.btn {
   border: none;
   padding: 0.5rem;
-  background-color: $Almost-White;
+  background: none;
+  display: block;
 }
-body {
-  background-color: $Almost-White;
+.close-btn {
+  margin-left: auto;
 }

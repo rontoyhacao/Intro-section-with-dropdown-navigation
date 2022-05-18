@@ -2,11 +2,66 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  .nav-container {
+    position: fixed;
+    background-color: $Almost-White;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    padding: 1.5rem;
+    z-index: 2;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+    &__nav-links {
+      margin: 1rem 0;
+      li {
+        margin-bottom: 1.5rem;
+      }
+    }
+    &__login {
+      margin: 2rem 0;
+      text-align: center;
+      li {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  .modal-bg {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(2px);
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+  }
+  .open {
+    transform: translateX(0);
+    display: block;
+  }
+}
+.features-dropdown {
+  &__links {
+    display: none;
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  &:hover &__links {
+    display: block;
+  }
 }
 
-.features-links,
-.company-links {
-  display: none;
+.company-dropdown {
+  &__links {
+    display: none;
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  &:hover &__links {
+    display: block;
+  }
 }
 
 .features-dropdown:hover .features-links {
@@ -15,4 +70,8 @@ nav {
 
 .company-dropdown:hover .company-links {
   display: block;
+}
+
+.disable-scroll {
+  overflow: hidden;
 }
