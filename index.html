@@ -26,11 +26,11 @@
       <div class="header-wrapper">
         <nav>
           <a href="#"><img src="/assets/images/logo.svg" alt="snap" /></a>
-          <button class="btn" id="hamburger-btn">
+          <button class="btn js-btn">
             <img src="/assets/images/icon-menu.svg" alt="Open Navigation" />
           </button>
-          <div class="nav-container">
-            <button class="btn close-btn" id="close-btn">
+          <div class="nav-container js-nav-container">
+            <button class="btn close-btn js-btn">
               <img
                 src="/assets/images/icon-close-menu.svg"
                 alt="Close Navigation"
@@ -38,16 +38,36 @@
             </button>
             <ul class="nav-container__nav-links">
               <li class="features-dropdown">
-                <a href="#">Features</a>
+                <a href="#" class="features-dropdown__link js-dropdown"
+                  >Features</a
+                >
                 <ul class="features-dropdown__links">
-                  <li><a href="#">Todo List</a></li>
-                  <li><a href="#">Calendar</a></li>
-                  <li><a href="#">Reminders</a></li>
-                  <li><a href="#">Planning</a></li>
+                  <li>
+                    <a href="#" class="features-dropdown__links__todo"
+                      >Todo List</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="features-dropdown__links__calendar"
+                      >Calendar</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="features-dropdown__links__reminder"
+                      >Reminders</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="features-dropdown__links__planning"
+                      >Planning</a
+                    >
+                  </li>
                 </ul>
               </li>
               <li class="company-dropdown">
-                <a href="#">Company</a>
+                <a href="#" class="company-dropdown__link js-dropdown"
+                  >Company</a
+                >
                 <ul class="company-dropdown__links">
                   <li><a href="#">History</a></li>
                   <li><a href="#">Our Team</a></li>
@@ -66,7 +86,7 @@
               </li>
             </ul>
           </div>
-          <div class="modal-bg btn"></div>
+          <div class="modal-bg js-btn js-modal-bg"></div>
         </nav>
       </div>
     </header>

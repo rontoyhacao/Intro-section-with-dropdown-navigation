@@ -41,36 +41,104 @@ nav {
     display: block;
   }
 }
+
 .features-dropdown {
+  &__link {
+    &::after {
+      content: url(/assets/images/icon-arrow-down.svg);
+      margin-left: 1rem;
+    }
+  }
   &__links {
     display: none;
     margin: 1.5rem 0;
-    text-align: center;
+    padding-left: 1.5rem;
+    &__todo {
+      &::before {
+        content: url(/assets/images/icon-todo.svg);
+        margin-right: 1rem;
+      }
+    }
+    &__calendar {
+      &::before {
+        content: url(/assets/images/icon-calendar.svg);
+        margin-right: 1rem;
+      }
+    }
+    &__reminder {
+      &::before {
+        content: url(/assets/images/icon-reminders.svg);
+        margin-right: 1rem;
+      }
+    }
+    &__planning {
+      &::before {
+        content: url(/assets/images/icon-planning.svg);
+        margin-right: 1rem;
+      }
+    }
   }
-  &:hover &__links {
-    display: block;
-  }
+  // &:hover &__links {
+  //   display: block;
+  // }
 }
 
 .company-dropdown {
+  &__link {
+    &::after {
+      content: url(/assets/images/icon-arrow-down.svg);
+      margin-left: 1rem;
+    }
+  }
   &__links {
     display: none;
     margin: 1.5rem 0;
-    text-align: center;
+    padding-left: 1.5rem;
   }
-  &:hover &__links {
-    display: block;
-  }
-}
-
-.features-dropdown:hover .features-links {
-  display: block;
-}
-
-.company-dropdown:hover .company-links {
-  display: block;
+  // &:hover &__links {
+  //   display: block;
+  // }
 }
 
 .disable-scroll {
   overflow: hidden;
+}
+
+.display-links {
+  display: block;
+}
+
+.hide-links-arrow::after {
+  content: url(/assets/images/icon-arrow-up.svg);
+  margin-left: 1rem;
+}
+
+@media screen and (min-width: 60rem) {
+  .features-dropdown {
+    &__links {
+      display: none;
+    }
+    &:hover {
+      &::after {
+        content: url(/assets/images/icon-arrow-up.svg);
+      }
+      &__links {
+        display: block;
+      }
+    }
+  }
+
+  .company-dropdown {
+    &__links {
+      display: none;
+    }
+    &:hover {
+      &::after {
+        content: url(/assets/images/icon-arrow-up.svg);
+      }
+      &__links {
+        display: block;
+      }
+    }
+  }
 }

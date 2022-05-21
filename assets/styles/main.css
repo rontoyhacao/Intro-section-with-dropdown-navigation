@@ -286,36 +286,76 @@ nav .open {
   display: block;
 }
 
+.features-dropdown__link::after {
+  content: url(/assets/images/icon-arrow-down.svg);
+  margin-left: 1rem;
+}
 .features-dropdown__links {
   display: none;
   margin: 1.5rem 0;
-  text-align: center;
+  padding-left: 1.5rem;
 }
-.features-dropdown:hover .features-dropdown__links {
-  display: block;
+.features-dropdown__links__todo::before {
+  content: url(/assets/images/icon-todo.svg);
+  margin-right: 1rem;
+}
+.features-dropdown__links__calendar::before {
+  content: url(/assets/images/icon-calendar.svg);
+  margin-right: 1rem;
+}
+.features-dropdown__links__reminder::before {
+  content: url(/assets/images/icon-reminders.svg);
+  margin-right: 1rem;
+}
+.features-dropdown__links__planning::before {
+  content: url(/assets/images/icon-planning.svg);
+  margin-right: 1rem;
 }
 
+.company-dropdown__link::after {
+  content: url(/assets/images/icon-arrow-down.svg);
+  margin-left: 1rem;
+}
 .company-dropdown__links {
   display: none;
   margin: 1.5rem 0;
-  text-align: center;
-}
-.company-dropdown:hover .company-dropdown__links {
-  display: block;
-}
-
-.features-dropdown:hover .features-links {
-  display: block;
-}
-
-.company-dropdown:hover .company-links {
-  display: block;
+  padding-left: 1.5rem;
 }
 
 .disable-scroll {
   overflow: hidden;
 }
 
+.display-links {
+  display: block;
+}
+
+.hide-links-arrow::after {
+  content: url(/assets/images/icon-arrow-up.svg);
+  margin-left: 1rem;
+}
+
+@media screen and (min-width: 60rem) {
+  .features-dropdown__links {
+    display: none;
+  }
+  .features-dropdown:hover::after {
+    content: url(/assets/images/icon-arrow-up.svg);
+  }
+  .features-dropdown:hover__links {
+    display: block;
+  }
+
+  .company-dropdown__links {
+    display: none;
+  }
+  .company-dropdown:hover::after {
+    content: url(/assets/images/icon-arrow-up.svg);
+  }
+  .company-dropdown:hover__links {
+    display: block;
+  }
+}
 .main-container picture img {
   width: 100%;
 }
