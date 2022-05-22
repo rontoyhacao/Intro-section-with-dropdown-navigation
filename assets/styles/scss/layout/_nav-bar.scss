@@ -12,17 +12,21 @@ nav {
     z-index: 2;
     transform: translateX(100%);
     transition: transform 0.4s ease-in-out;
+    overflow: scroll;
     &__nav-links {
-      margin: 1rem 0;
-      li {
-        margin-bottom: 1.5rem;
+      margin: 1rem 0 0;
+      a {
+        display: block;
+        padding: 0.7rem 0;
       }
     }
     &__login {
-      margin: 2rem 0;
       text-align: center;
-      li {
-        margin-bottom: 1rem;
+      margin: 1rem 0 5rem;
+      a {
+        display: block;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
       }
     }
   }
@@ -39,6 +43,7 @@ nav {
   .open {
     transform: translateX(0);
     display: block;
+    box-shadow: -2px 2px 15px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -51,7 +56,8 @@ nav {
   }
   &__links {
     display: none;
-    margin: 1.5rem 0;
+    // margin: 1rem 0;
+    // margin-top: 0.5rem;
     padding-left: 1.5rem;
     &__todo {
       &::before {
@@ -92,7 +98,8 @@ nav {
   }
   &__links {
     display: none;
-    margin: 1.5rem 0;
+    // margin: 1rem 0;
+    // margin-top: 0.5rem;
     padding-left: 1.5rem;
   }
   // &:hover &__links {

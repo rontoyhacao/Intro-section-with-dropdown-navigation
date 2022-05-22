@@ -257,19 +257,23 @@ nav .nav-container {
   z-index: 2;
   transform: translateX(100%);
   transition: transform 0.4s ease-in-out;
+  overflow: scroll;
 }
 nav .nav-container__nav-links {
-  margin: 1rem 0;
+  margin: 1rem 0 0;
 }
-nav .nav-container__nav-links li {
-  margin-bottom: 1.5rem;
+nav .nav-container__nav-links a {
+  display: block;
+  padding: 0.7rem 0;
 }
 nav .nav-container__login {
-  margin: 2rem 0;
   text-align: center;
+  margin: 1rem 0 5rem;
 }
-nav .nav-container__login li {
-  margin-bottom: 1rem;
+nav .nav-container__login a {
+  display: block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 nav .modal-bg {
   display: none;
@@ -284,6 +288,7 @@ nav .modal-bg {
 nav .open {
   transform: translateX(0);
   display: block;
+  box-shadow: -2px 2px 15px rgba(0, 0, 0, 0.5);
 }
 
 .features-dropdown__link::after {
@@ -292,7 +297,6 @@ nav .open {
 }
 .features-dropdown__links {
   display: none;
-  margin: 1.5rem 0;
   padding-left: 1.5rem;
 }
 .features-dropdown__links__todo::before {
@@ -318,7 +322,6 @@ nav .open {
 }
 .company-dropdown__links {
   display: none;
-  margin: 1.5rem 0;
   padding-left: 1.5rem;
 }
 
