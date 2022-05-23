@@ -196,6 +196,11 @@ p {
     --fs-700: 4rem;
   }
 }
+@media screen and (min-width: 60rem) {
+  :root {
+    --fs-500: 1rem;
+  }
+}
 .primary-button {
   color: hsl(0deg, 0%, 98%);
   border: 2px solid hsl(0deg, 0%, 8%);
@@ -223,6 +228,11 @@ p {
   border: 2px solid hsl(0deg, 0%, 8%);
 }
 
+@media screen and (min-width: 60rem) {
+  .primary-button--register {
+    padding: 1rem;
+  }
+}
 .btn {
   border: none;
   padding: 0.5rem;
@@ -234,6 +244,11 @@ p {
   margin-left: auto;
 }
 
+@media screen and (min-width: 60rem) {
+  .btn {
+    display: none;
+  }
+}
 header {
   padding: 1.2rem 0;
 }
@@ -266,6 +281,45 @@ nav .nav-container__nav-links a {
   display: block;
   padding: 0.7rem 0;
 }
+nav .nav-container__nav-links .features-dropdown__link::after {
+  content: url(/assets/images/icon-arrow-down.svg);
+  margin-left: 1rem;
+}
+nav .nav-container__nav-links .features-dropdown__links {
+  display: none;
+  padding-left: 1.5rem;
+}
+nav .nav-container__nav-links .features-dropdown__links__todo::before {
+  content: url(/assets/images/icon-todo.svg);
+  margin-right: 1rem;
+}
+nav .nav-container__nav-links .features-dropdown__links__calendar::before {
+  content: url(/assets/images/icon-calendar.svg);
+  margin-right: 1rem;
+}
+nav .nav-container__nav-links .features-dropdown__links__reminder::before {
+  content: url(/assets/images/icon-reminders.svg);
+  margin-right: 1rem;
+}
+nav .nav-container__nav-links .features-dropdown__links__planning::before {
+  content: url(/assets/images/icon-planning.svg);
+  margin-right: 1rem;
+}
+nav .nav-container__nav-links .company-dropdown__link::after {
+  content: url(/assets/images/icon-arrow-down.svg);
+  margin-left: 1rem;
+}
+nav .nav-container__nav-links .company-dropdown__links {
+  display: none;
+  padding-left: 1.5rem;
+}
+nav .nav-container__nav-links .display-links {
+  display: block;
+}
+nav .nav-container__nav-links .hide-links-arrow::after {
+  content: url(/assets/images/icon-arrow-up.svg);
+  margin-left: 1rem;
+}
 nav .nav-container__login {
   text-align: center;
   margin: 1rem 0 5rem;
@@ -291,72 +345,110 @@ nav .open {
   box-shadow: -2px 2px 15px rgba(0, 0, 0, 0.5);
 }
 
-.features-dropdown__link::after {
-  content: url(/assets/images/icon-arrow-down.svg);
-  margin-left: 1rem;
-}
-.features-dropdown__links {
-  display: none;
-  padding-left: 1.5rem;
-}
-.features-dropdown__links__todo::before {
-  content: url(/assets/images/icon-todo.svg);
-  margin-right: 1rem;
-}
-.features-dropdown__links__calendar::before {
-  content: url(/assets/images/icon-calendar.svg);
-  margin-right: 1rem;
-}
-.features-dropdown__links__reminder::before {
-  content: url(/assets/images/icon-reminders.svg);
-  margin-right: 1rem;
-}
-.features-dropdown__links__planning::before {
-  content: url(/assets/images/icon-planning.svg);
-  margin-right: 1rem;
-}
-
-.company-dropdown__link::after {
-  content: url(/assets/images/icon-arrow-down.svg);
-  margin-left: 1rem;
-}
-.company-dropdown__links {
-  display: none;
-  padding-left: 1.5rem;
-}
-
 .disable-scroll {
   overflow: hidden;
 }
 
-.display-links {
-  display: block;
-}
-
-.hide-links-arrow::after {
-  content: url(/assets/images/icon-arrow-up.svg);
-  margin-left: 1rem;
-}
-
 @media screen and (min-width: 60rem) {
-  .features-dropdown__links {
-    display: none;
+  nav {
+    justify-content: initial;
   }
-  .features-dropdown:hover::after {
+  nav .nav-container {
+    position: initial;
+    transform: none;
+    height: initial;
+    overflow: initial;
+    padding: initial;
+    background-color: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-left: 3rem;
+  }
+  nav .nav-container__nav-links {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  nav .nav-container__nav-links a {
+    padding: 0;
+  }
+  nav .nav-container__nav-links li {
+    margin: 0 1rem;
+  }
+  nav .nav-container__nav-links .features-dropdown__link::after {
+    margin-left: 0.5rem;
+  }
+  nav .nav-container__nav-links .features-dropdown__links {
+    padding: 1rem;
+    position: absolute;
+    background-color: hsl(0deg, 0%, 98%);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    left: -3rem;
+    top: 0;
+    opacity: 0;
+    transition: all 0.3s;
+    display: block;
+    visibility: hidden;
+  }
+  nav .nav-container__nav-links .features-dropdown__links li {
+    margin: 0;
+  }
+  nav .nav-container__nav-links .features-dropdown__links li a {
+    padding: 0.5rem 0;
+  }
+  nav .nav-container__nav-links .features-dropdown:hover .features-dropdown__link::after {
     content: url(/assets/images/icon-arrow-up.svg);
   }
-  .features-dropdown:hover__links {
+  nav .nav-container__nav-links .features-dropdown:hover .features-dropdown__links {
+    visibility: visible;
+    top: 2rem;
+    opacity: 1;
+  }
+  nav .nav-container__nav-links .company-dropdown__link::after {
+    margin-left: 0.5rem;
+  }
+  nav .nav-container__nav-links .company-dropdown__links {
+    padding: 1rem;
+    position: absolute;
+    background-color: hsl(0deg, 0%, 98%);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    top: 0;
+    opacity: 0;
+    transition: all 0.3s;
     display: block;
+    visibility: hidden;
   }
-
-  .company-dropdown__links {
-    display: none;
+  nav .nav-container__nav-links .company-dropdown__links li {
+    margin: 0;
   }
-  .company-dropdown:hover::after {
+  nav .nav-container__nav-links .company-dropdown__links li a {
+    padding: 0.5rem 0;
+  }
+  nav .nav-container__nav-links .company-dropdown:hover .company-dropdown__link::after {
     content: url(/assets/images/icon-arrow-up.svg);
   }
-  .company-dropdown:hover__links {
-    display: block;
+  nav .nav-container__nav-links .company-dropdown:hover .company-dropdown__links {
+    visibility: visible;
+    top: 2rem;
+    opacity: 1;
+  }
+  nav .nav-container__login {
+    display: flex;
+    align-items: center;
+    text-align: initial;
+    margin: 0;
+  }
+  nav .nav-container__login li:nth-child(1) {
+    margin: 0 1rem;
+  }
+  nav .nav-container__login li:nth-child(1) a {
+    padding: initial;
   }
 }
 .main-container picture img {

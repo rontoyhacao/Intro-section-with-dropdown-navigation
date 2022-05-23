@@ -5,6 +5,7 @@ const modalBg = document.querySelector(`.js-modal-bg`);
 
 const linkDropdown = document.querySelectorAll(`.js-dropdown`);
 
+// hamburger button function: display and close mobile navigation
 hamburgerBtn.forEach((el) => {
   el.addEventListener(`click`, () => {
     mobileNavBar.classList.toggle(`open`);
@@ -13,6 +14,7 @@ hamburgerBtn.forEach((el) => {
   });
 });
 
+// mobile navigation dropdown
 linkDropdown.forEach((el) => {
   el.addEventListener(`click`, () => {
     event.preventDefault();

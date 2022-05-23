@@ -23,3 +23,9 @@
     border: 2px solid $Almost-Black;
   }
 }
+
+@media screen and (min-width: 60rem) {
+  .primary-button--register {
+    padding: 1rem;
+  }
+}
