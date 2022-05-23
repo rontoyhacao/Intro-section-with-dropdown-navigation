@@ -1,7 +1,6 @@
 header {
   padding: 1.2rem 0;
   .header-wrapper {
-    width: 94%;
-    margin: 0 auto;
+    @include wide-container;
   }
 }

@@ -199,6 +199,7 @@ p {
 @media screen and (min-width: 60rem) {
   :root {
     --fs-500: 1rem;
+    --fs-700: 5rem;
   }
 }
 .primary-button {
@@ -255,6 +256,7 @@ header {
 header .header-wrapper {
   width: 94%;
   margin: 0 auto;
+  max-width: 112rem;
 }
 
 nav {
@@ -386,10 +388,10 @@ nav .open {
     padding: 1rem;
     position: absolute;
     background-color: hsl(0deg, 0%, 98%);
-    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
     left: -3rem;
-    top: 0;
+    top: 1rem;
     opacity: 0;
     transition: all 0.3s;
     display: block;
@@ -416,9 +418,9 @@ nav .open {
     padding: 1rem;
     position: absolute;
     background-color: hsl(0deg, 0%, 98%);
-    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
-    top: 0;
+    top: 1rem;
     opacity: 0;
     transition: all 0.3s;
     display: block;
@@ -470,6 +472,28 @@ nav .open {
   width: 100%;
 }
 
+@media screen and (min-width: 60rem) {
+  main {
+    padding-top: 4rem;
+  }
+  main .main-container {
+    width: 94%;
+    margin: 0 auto;
+    max-width: 112rem;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10rem;
+    padding: 0 5rem;
+    box-sizing: border-box;
+  }
+  main .main-container .cta-container {
+    text-align: initial;
+    margin-left: 3rem;
+  }
+  main .main-container .cta-container .stakeholder-logos-container {
+    margin: 0 0 auto;
+  }
+}
 .attribution {
   text-align: center;
   padding: 1rem 0;

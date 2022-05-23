@@ -18,3 +18,25 @@
     }
   }
 }
+
+@media screen and (min-width: 60rem) {
+  main {
+    padding-top: 4rem;
+    .main-container {
+      @include wide-container;
+      display: flex;
+      flex-direction: row-reverse;
+      // align-items: flex-end;
+      gap: 10rem;
+      padding: 0 5rem;
+      box-sizing: border-box;
+      .cta-container {
+        text-align: initial;
+        margin-left: 3rem;
+        .stakeholder-logos-container {
+          margin: 0 0 auto;
+        }
+      }
+    }
+  }
+}
