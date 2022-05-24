@@ -193,12 +193,17 @@ p {
 }
 @media screen and (min-width: 40rem) {
   :root {
-    --fs-700: 4rem;
+    --fs-700: 3.6rem;
   }
 }
 @media screen and (min-width: 60rem) {
   :root {
     --fs-500: 1rem;
+    --fs-700: 4rem;
+  }
+}
+@media screen and (min-width: 70rem) {
+  :root {
     --fs-700: 5rem;
   }
 }
@@ -482,16 +487,32 @@ nav .open {
     max-width: 112rem;
     display: flex;
     flex-direction: row-reverse;
-    gap: 10rem;
-    padding: 0 5rem;
+    gap: 2rem;
     box-sizing: border-box;
   }
   main .main-container .cta-container {
     text-align: initial;
-    margin-left: 3rem;
+    margin: 6rem 0 0 3rem;
+    position: relative;
   }
   main .main-container .cta-container .stakeholder-logos-container {
-    margin: 0 0 auto;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+  }
+}
+@media screen and (min-width: 80rem) {
+  main .main-container {
+    gap: 10rem;
+    padding: 0 5rem;
+  }
+}
+@media screen and (min-width: 90rem) {
+  main .main-container .cta-container h1 span {
+    display: block;
+  }
+  main .main-container .cta-container p {
+    margin: 3rem 0;
   }
 }
 .attribution {
