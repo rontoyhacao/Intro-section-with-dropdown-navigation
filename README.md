@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/mobilefirst-intro-section-with-dropdown-navigation-RKEu9Cs1Dr](https://www.frontendmentor.io/solutions/mobilefirst-intro-section-with-dropdown-navigation-RKEu9Cs1Dr)
 - Live Site URL: [https://intro-section-with-dropdown-navigation-one.vercel.app/](https://intro-section-with-dropdown-navigation-one.vercel.app/)
 
 ## My process
