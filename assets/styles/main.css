@@ -500,6 +500,10 @@ nav .open {
     position: absolute;
     bottom: 0;
   }
+
+  footer {
+    padding: 1rem 0;
+  }
 }
 @media screen and (min-width: 80rem) {
   main .main-container {
